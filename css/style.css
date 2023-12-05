@@ -83,13 +83,14 @@ address{
 .hero-title .accent{
     color: var(--color-brand);
 }
-h1{
-    border: 4px solid var(--color-primary-dark);
-}
 .hero-title{
     font-style: 'Poppins' sans-serif;
     font-size: 128px;
-    height: 192px;
+    margin-bottom: 48px;
+    color: var(--color-primary-light);
+    text-align: center;
+    line-height: 1;
+    font-weight: 900;
 }
 /* -- Titles --*/
 .formats-title{
@@ -143,6 +144,7 @@ ul{
     background-image: url(./images/hero-section-background.jpg);
     background-repeat:no-repeat;
     background-position: center top;
+    background-size: cover;
 } 
 .section{
     padding: 48px 0;
@@ -177,7 +179,7 @@ ul{
     font-weight: 600;
     text-transform: uppercase;
 }
-.traditions-section{
+.traditions-section {
     padding-top: 96px;
 }
 .traditions-title{
@@ -195,18 +197,32 @@ ul{
     background-color: var(--color-brand);
     padding: 16px 0;
 }
-/* -- Chefs -- */
-.chef-title{
-    font-style: 40px;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
+/* -- Formats -- */
 .format-title{
     font-style: 24px;
 }
 .format-text{
     font-style: 14px;
     font-weight: 300;
+}
+.scrolling-button{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-dark);
+    cursor: pointer;
+}
+.scrolling-button:hover{
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+}
+.scrolling-icon{
+    fill: var(--color-primary-dark);
 }
 .formats-item{
     flex-basis: calc((100% - 40px) / 3);
@@ -218,10 +234,20 @@ ul{
     height: 444px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
 }
+.formats-container{
+    display: flex;
+    gap: 33px;
+}
 .formats-list{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}
+/* -- Chefs -- */
+.chef-title{
+    font-style: 40px;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 .chefs-title{
     margin: 0 auto 80px;
@@ -238,6 +264,17 @@ ul{
     width: 352px;
     border: 2px solid var(--color-brand-light);
 }
+.chefs-list{
+    display: flex;
+    gap: 30px;
+}
+.chef-card{
+    display: flex;
+    gap: 30px;
+}
+.chefs-item{
+    flex-basis: calc((100% - 30px) / 2);
+}
 /* -- Address -- */
 .address-link{
     font-style: 16px;
@@ -247,6 +284,9 @@ ul{
 }
 .address-link:hover{
     color:var(--color-brand);
+}
+.address-icon{
+    fill: var(--color-primary-light)
 }
 .address-copyright{
     font-style: 14px;
