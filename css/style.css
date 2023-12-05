@@ -216,6 +216,7 @@ ul{
     background-color: transparent;
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
+    flex-shrink: 0;
 }
 .scrolling-button:hover{
     background-color: var(--color-primary-dark);
