@@ -67,6 +67,7 @@ address{
     color:var(--color-primary-light);
     text-align: center;
     text-decoration: none;
+    transition: color .3s;
 }
 .link:hover{
     color: var(--color-brand);
@@ -122,6 +123,13 @@ ul{
     background-color: var(--color-brand);
 }
 /* -- Header -- */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
+}
 .header-container{
     display: flex;
     align-items: center;
@@ -132,7 +140,6 @@ ul{
     display: flex;
     align-items: center;
     gap: 40px;
-    background-color: antiquewhite;
 }
 .header-menu{
     display: flex;
@@ -146,7 +153,7 @@ ul{
 /* -- Sections -- */
 .hero-section{
     padding: 272px 0;
-    background-image: url(./images/hero-section-background.jpg);
+    background-image: linear-gradient(102.76deg,rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url(./images/hero-section-background.jpg);
     background-repeat:no-repeat;
     background-position: center top;
     background-size: cover;
@@ -223,6 +230,9 @@ ul{
     cursor: pointer;
     flex-shrink: 0;
 }
+.scrolling-button.next{
+    transform: rotate(180deg);
+}
 .scrolling-button:hover{
     background-color: var(--color-primary-dark);
     fill: var(--color-primary-light);
@@ -238,7 +248,11 @@ ul{
     border-radius: 16px;
     padding: 24px;
     height: 444px;
+    transition: transform .3s;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+}
+.format-card:hover{
+    transform: scale(1.05);
 }
 .formats-container{
     display: flex;
@@ -383,4 +397,34 @@ ul{
 /* -- Modal --*/
 .backdrop{
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    transition: opacity .3s, visibility .3s;
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal{
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
+    padding: 128px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+}
+.modal-btn-close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }

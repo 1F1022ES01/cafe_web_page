@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <header>
+        <header class="header">
             <div class="container">
                 <div class="header-container">
                     <nav class="header-nav">
@@ -25,7 +25,7 @@
                             <li ><a class="link" href="#contacts-section">Контакти</a></li>
                         </ul>
                     </nav>
-                    <button type="submit" class="button">Замовити дзвінок</button>
+                    <button type="button" class="button modal-btn-open">Замовити дзвінок</button>
                 </div>
                 </div>
         </header>
@@ -130,9 +130,9 @@
                                 </article>
                             </li>
                         </ul>
-                        <button class="scrolling-button" type="button">
+                        <button class="scrolling-button next" type="button">
                             <svg class="scrolling-icon" width="16" height="16">
-                                <use href="#"></use>
+                                <use href="./css/images/sprite/circle-left.svg#icon-arrow"></use>
                             </svg>
                         </button>
                     </div>
@@ -192,7 +192,16 @@
         </footer> 
         
         <div class="backdrop">
-            <div class="modal"></div>
-        </div>  
+            <div class="modal">
+                <button class="modal-btn-close" type="button">Close</button>
+                <h2>Замовити дзвінок</h2>
+                <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+                <form name="contact-form" autocomplete="off" novalidate>
+                    <label for="user-name">Введіть Ваше ім'я</label>
+                    <input type="text" id="user-name"/>
+                </form>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>  
     </body>
 </html>
